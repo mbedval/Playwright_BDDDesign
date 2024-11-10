@@ -5,7 +5,7 @@ URL :  https://vitalets.github.io/playwright-bdd/#/getting-started/index
 
 installation
 
-``
+```
 npm init playwright@latest
 npm i -D playwright-bdd
 ```
