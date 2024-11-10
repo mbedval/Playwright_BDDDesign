@@ -1,12 +1,13 @@
-/** Generated from: sample.feature */
-import { test } from "playwright-bdd";
+/** Generated from: features\sample.feature */
+import { test } from "../../features/steps/fixtures.ts";
 
 test.describe("Playwright site", () => {
 
-  test("Check title", async ({ Given, page, When, Then }) => {
+  test("Check title", async ({ Given, page, When, And, Then }) => {
     await Given("I open url \"https://playwright.dev\"", null, { page });
     await When("I click link \"Get started\"", null, { page });
-    await Then("I see in title \"Playwright\"", null, { page });
+    await And("I click link \"Browsers\"", null, { page });
+    await Then("I see in title \"Browsers\"");
   });
 
 });
@@ -15,7 +16,7 @@ test.describe("Playwright site", () => {
 
 test.use({
   $test: ({}, use) => use(test),
-  $uri: ({}, use) => use("sample.feature"),
+  $uri: ({}, use) => use("features\\sample.feature"),
   $bddFileMeta: ({}, use) => use(bddFileMeta),
 });
 
